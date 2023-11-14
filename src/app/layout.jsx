@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html data-theme="retro" lang="en">
+    <html data-theme="matas" lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
