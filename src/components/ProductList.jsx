@@ -1,5 +1,6 @@
 import { supabase } from "@/utils/supabaseClient";
 import ProductCard from "./ProductCard";
+import QuizCard from "./QuizCard";
 
 let { data: produkter, error } = await supabase
     .from("produkter")
@@ -12,7 +13,11 @@ let { data: produkter, error } = await supabase
 function ProductList(props) {
     return (
         <div>
-            {produkter.map((produkt) => (
+            {produkter.slice(0, 3).map((produkt) => (
+                <ProductCard produkt={produkt} key={produkt.id}/>
+            ))}
+            <QuizCard />
+            {produkter.slice(3).map((produkt) => (
                 <ProductCard produkt={produkt} key={produkt.id}/>
             ))}
         </div>
