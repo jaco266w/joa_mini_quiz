@@ -14,11 +14,11 @@ function ProductList(props) {
     return (
         <div>
             {produkter.slice(0, 3).map((produkt) => (
-                <ProductCard produkt={produkt} key={produkt.id}/>
+                <ProductCard name={produkt.name} brand={produkt.brand} image={produkt.image} price={produkt.price} key={produkt.id}/>
             ))}
             <QuizCard />
             {produkter.slice(3).map((produkt) => (
-                <ProductCard produkt={produkt} key={produkt.id}/>
+                <ProductCard name={produkt.name} brand={produkt.brand} image={produkt.image} price={produkt.price} key={produkt.id}/>
             ))}
         </div>
     );
