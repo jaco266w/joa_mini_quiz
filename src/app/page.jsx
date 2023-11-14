@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProductCard";
+import ProductList from "@/components/ProductList";
 import QuizCard from "@/components/QuizCard";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
 			</div>
 
 			<ProductCard />
-			<QuizCard />
+      <QuizCard />
+      <ProductList />
 		</main>
 	);
 }
