@@ -6,18 +6,18 @@ let { data: produkter, error } = await supabase
     .from("produkter")
     .select("*")
     .order("id", { ascending: true })
-    .limit(10);
+    .limit(11);
 
 
 
 function ProductList(props) {
     return (
-        <div>
-            {produkter.slice(0, 3).map((produkt) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {produkter.slice(0, 2).map((produkt) => (
                 <ProductCard name={produkt.name} brand={produkt.brand} image={produkt.image} price={produkt.price} key={produkt.id}/>
             ))}
             <QuizCard />
-            {produkter.slice(3).map((produkt) => (
+            {produkter.slice(2).map((produkt) => (
                 <ProductCard name={produkt.name} brand={produkt.brand} image={produkt.image} price={produkt.price} key={produkt.id}/>
             ))}
         </div>
