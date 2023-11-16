@@ -5,44 +5,82 @@ import Steps from "./Steps";
 import { useState } from "react";
 
 export default function Modal() {
-	const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-	function nextSlide() {
-		if (currentSlide === 2) {
-			return;
-		}
-		setCurrentSlide((old) => old + 1);
-	}
+  function nextSlide() {
+    if (currentSlide === 2) {
+      return;
+    }
+    setCurrentSlide((old) => old + 1);
+  }
 
-	function prevSlide() {
-		if (currentSlide === 0) {
-			return;
-		}
-		setCurrentSlide((old) => old - 1);
-	}
-	return (
-		<dialog id="my_modal_3" className="modal">
-			<div className="modal-box bg-[url('/quiz_bg.png')]">
-				<form method="dialog">
-					{/* if there is a button in form, it will close the modal */}
-					<button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-						✕
-					</button>
-				</form>
-				<Slide title="Første Slide">
-					<ul>
-						<li>årsdag</li>
-						<li>valentines</li>
-						<li>gave</li>
-						<li>gaveide</li>
-					</ul>
-				</Slide>
-				<Steps currentStep={currentSlide} />
-				<ModalButtons
-					clickBackwards={() => prevSlide()}
-					clickForwards={() => nextSlide()}
-				/>
-			</div>
-		</dialog>
-	);
+  function prevSlide() {
+    if (currentSlide === 0) {
+      return;
+    }
+    setCurrentSlide((old) => old - 1);
+  }
+  return (
+    <dialog id="my_modal_3" className="modal">
+      <div className="modal-box bg-cover bg-no-repeat bg-center bg-[url('/quiz_bg.png')]  w-9/12 max-w-2xl  ">
+        <form className="h-44" method="dialog">
+          {/* if there is a button in form, it will close the modal */}
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <Slide title="Hvad er den særlige anledning?">
+          <div className="flex flex-col justify-center p-20">
+            <div className="grid place-content-center">
+              <ul>
+                <li>
+                  <div className="form-control">
+                    <label className="label justify-start cursor-pointer">
+                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
+                      <span className="label-text pl-4">Julegave</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div className="form-control">
+                    <label className="label justify-start cursor-pointer">
+                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
+                      <span className="label-text pl-4">Fødselsdag</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  {" "}
+                  <div className="form-control">
+                    <label className="label justify-start cursor-pointer">
+                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
+                      <span className="label-text pl-4">Årsdag</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  {" "}
+                  <div className="form-control">
+                    <label className="label justify-start cursor-pointer">
+                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
+                      <span className="label-text pl-4">Bare fordi</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  {" "}
+                  <div className="form-control">
+                    <label className="label justify-start cursor-pointer">
+                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
+                      <span className="label-text pl-4">Undskyld gave</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Slide>
+        <Steps currentStep={currentSlide} />
+        <ModalButtons clickBackwards={() => prevSlide()} clickForwards={() => nextSlide()} />
+      </div>
+    </dialog>
+  );
 }

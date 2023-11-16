@@ -5,7 +5,7 @@ export default async function ProductCard(props) {
   return (
     <div className="card w-72 p-4 bg-base-100 border-solid border-2 border-neutral border-slate-200 hover:shadow-xl">
       <figure>
-        <Image className="w-20 h-44" src={props.image} alt="Shoes" width={200} height={200} />
+        <Image className="w-20 h-44" src={props.image} alt="produkt" width={200} height={200} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{props.brand}</h2>
