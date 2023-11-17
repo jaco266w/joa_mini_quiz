@@ -4,6 +4,8 @@ import Steps from "./Steps";
 
 import { useState } from "react";
 import Q1 from "./Q1";
+import Q3 from "./Q3";
+import Q4 from "./Q4";
 
 export default function Modal() {
 	const [currentSlide, setCurrentSlide] = useState(0);
