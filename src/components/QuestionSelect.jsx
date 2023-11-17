@@ -1,10 +1,10 @@
 function QuestionSelect(props) {
   return (
-    <div className="flex flex-col justify-center gap-10">
+    <div className="flex flex-col justify-center gap-10 h-full ">
       <h3 className="font-bold font-serif text-center text-3xl">
         {props.question.question}
       </h3>
-      <div className="grid place-content-center">
+      <div className="flex flex-col justify-center items-center ">
         <ul>
           {props.question.options.map((option, index) => (
             <li key={index}>

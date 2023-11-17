@@ -1,6 +1,6 @@
 export default function Steps(props) {
   return (
-    <ul className="steps grid place-content-center ">
+    <ul className="steps w-full mb-4">
       <li
         className={`step ${props.currentStep >= 1 ? "step step-primary" : ""}`}
       ></li>

@@ -56,8 +56,10 @@ export default function Modal() {
             ✕
           </button>
         </form>
+
         {currentSlide === 0 && <Qstart />}
         {currentSlide === 0 && <StartButton clickForwards={nextSlide} />}
+
         {otherQuestions
           // Filter out the first two questions and the questions that don't match the previous answers
           .filter(
@@ -75,6 +77,7 @@ export default function Modal() {
                 />
               ),
           )}
+
         {currentSlide === 5 && (
           <QuestionSlider
             question={sliderQuestion}
@@ -82,20 +85,22 @@ export default function Modal() {
             svar={svar[4]}
           />
         )}
+
         {currentSlide === 6 && (
           <div>
             <Qend />
             <GiftButton />
           </div>
         )}
+
         {currentSlide >= 1 && currentSlide <= 5 && (
           <div>
-            <Steps currentStep={currentSlide} />
             <ModalButtons
               clickBackwards={prevSlide}
               clickForwards={nextSlide}
               isOptionSelected={svar[currentSlide - 1] !== undefined}
             />
+            <Steps currentStep={currentSlide} />
           </div>
         )}
       </div>
