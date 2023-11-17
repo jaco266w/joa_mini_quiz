@@ -18,7 +18,7 @@ export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function nextSlide() {
-    if (currentSlide === 4) {
+    if (currentSlide === 5) {
       return;
     }
     setCurrentSlide((old) => old + 1);
