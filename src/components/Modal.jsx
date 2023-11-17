@@ -1,34 +1,26 @@
 import { useState } from "react";
 
-import Slide from "./Slide";
 import ModalButtons from "./ModalButtons";
 import StartButton from "./StartButton";
 import GiftButton from "./GiftButton";
 import Steps from "./Steps";
 import Qstart from "./Qstart";
-import Q1 from "./Q1";
-import Q2 from "./Q2";
-import Q3 from "./Q3";
-import Q4 from "./Q4";
 import Qend from "./Qend";
 import Image from "next/image";
+import QuestionSelect from "./QuestionSelect";
+import QuestionSlider from "./QuestionSlider";
 
 export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [q1Svar, setQ1Svar] = useState("");
-  const [q2Svar, setQ2Svar] = useState("");
+  const [isOptionSelected, setIsOptionSelected] = useState(false);
 
-  console.log(q1Svar);
-  console.log(q2Svar);
+  const [svar, setSvar] = useState([]);
+  console.log(svar);
 
   const questions = require("../utils/questions.json");
 
-  const q2Questions = questions.filter(
-    (question) => question.kategori === q2Svar,
-  );
-
   function nextSlide() {
-    if (currentSlide === 5) {
+    if (currentSlide === 6) {
       return;
     }
     setCurrentSlide((old) => old + 1);
@@ -40,9 +32,10 @@ export default function Modal() {
     }
     setCurrentSlide((old) => old - 1);
   }
+
   return (
     <dialog id="my_modal_3" className="modal ">
-      <div className="modal-box h-screen md:h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
+      <div className="modal-box h-screen md:h-4/6 max-w-2xl overflow-hidden flex flex-col justify-between rounded-2xl">
         <Image
           height={500}
           width={500}
@@ -56,48 +49,80 @@ export default function Modal() {
             ✕
           </button>
         </form>
-        {currentSlide === 0 && (
-          <>
-            <Qstart />
-          </>
-        )}
-        {currentSlide === 0 && (
-          <>
-            <StartButton clickForwards={nextSlide} />
-          </>
-        )}
+        {currentSlide === 0 && <Qstart />}
+        {currentSlide === 0 && <StartButton clickForwards={nextSlide} />}
         {currentSlide === 1 && (
-          <Slide title="Første Spørgsmål">
-            <Q1 onChange={(e) => setQ1Svar(e.target.value)} />
-          </Slide>
+          <QuestionSelect
+            onChange={(e) => {
+              let newSvar = [...svar];
+              newSvar[0] = e.target.value;
+              setSvar(newSvar);
+            }}
+            svar={svar[0]}
+            question={questions[0]}
+          />
         )}
         {currentSlide === 2 && (
-          <Slide title="Andet Spørgsmål">
-            <Q2 onChange={(e) => setQ2Svar(e.target.value)} />
-          </Slide>
+          <QuestionSelect
+            question={questions[1]}
+            onChange={(e) => {
+              let newSvar = [...svar];
+              newSvar[1] = e.target.value;
+              setSvar(newSvar);
+            }}
+            svar={svar[1]}
+          />
         )}
         {currentSlide === 3 && (
-          <Slide title="hihi">
-            <Q3 q2Svar={q2Svar} />
-          </Slide>
+          <QuestionSelect
+            question={questions[2].subQuestions
+              .find((subQuestion) => subQuestion.category === svar[1])
+              .questions.find((question) => question.subNumber === 1)}
+            onChange={(e) => {
+              let newSvar = [...svar];
+              newSvar[2] = e.target.value;
+              setSvar(newSvar);
+            }}
+            svar={svar[2]}
+          />
         )}
         {currentSlide === 4 && (
-          <Slide title="Fjerde Spørgsmål">
-            <Q4 />
-          </Slide>
+          <QuestionSelect
+            question={questions[2].subQuestions
+              .find((subQuestion) => subQuestion.category === svar[1])
+              .questions.find((question) => question.subNumber === 2)}
+            onChange={(e) => {
+              let newSvar = [...svar];
+              newSvar[3] = e.target.value;
+              setSvar(newSvar);
+            }}
+            svar={svar[3]}
+          />
         )}
         {currentSlide === 5 && (
+          <QuestionSlider
+            question={questions[3]}
+            onChange={(e) => {
+              let newSvar = [...svar];
+              newSvar[4] = e.target.value;
+              setSvar(newSvar);
+            }}
+            svar={svar[4]}
+          />
+        )}
+        {currentSlide === 6 && (
           <div>
             <Qend />
             <GiftButton />
           </div>
         )}
-        {currentSlide >= 1 && currentSlide <= 4 ? (
+        {currentSlide >= 1 && currentSlide <= 5 ? (
           <div>
             <Steps currentStep={currentSlide} />
             <ModalButtons
               clickBackwards={prevSlide}
               clickForwards={nextSlide}
+              isOptionSelected={svar[currentSlide - 1] !== undefined}
             />
           </div>
         ) : null}

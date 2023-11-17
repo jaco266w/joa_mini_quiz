@@ -1,142 +1,173 @@
 [
     {
-        "kategori": "Make up",
-        "questions": [
+        "number": 1,
+        "question": "Hvad er den særlige anledning?",
+        "options": [
+            "Julegave",
+            "Fødselsdag",
+            "Årsdag",
+            "Bare fordi",
+            "Undskyldning"
+        ]
+    },
+    {
+        "number": 2,
+        "question": "Hvad er personens hovedinteresse?",
+        "options": [
+            "Make up",
+            "Hårpleje",
+            "Duft",
+            "Negle",
+            "Body care"
+        ]
+    },
+    {
+        "number": 3,
+        "subQuestions": [
             {
-                "subNumber": 1,
-                "question": "Hvilket make-up område er de mest interesseret i?",
-                "options": [
-                    "Øjne",
-                    "Læber",
-                    "Hud",
-                    "Bryn",
-                    "Ansigt"
+                "category": "Make up",
+                "questions": [
+                    {
+                        "subNumber": 1,
+                        "question": "Hvilket make-up område er de mest interesseret i?",
+                        "options": [
+                            "Øjne",
+                            "Læber",
+                            "Hud",
+                            "Bryn",
+                            "Ansigt"
+                        ]
+                    },
+                    {
+                        "subNumber": 2,
+                        "question": "Hvilken farvepalette foretrækker personen?",
+                        "options": [
+                            "Farverig",
+                            "Nude",
+                            "Mørk",
+                            "Lys",
+                            "Neutral"
+                        ]
+                    }
                 ]
             },
             {
-                "subNumber": 2,
-                "question": "Hvilken farvepalette foretrækker personen?",
-                "options": [
-                    "Farverig",
-                    "Nude",
-                    "Mørk",
-                    "Lys",
-                    "Neutral"
+                "category": "Hårpleje",
+                "questions": [
+                    {
+                        "subNumber": 1,
+                        "question": "Hvad er personens typiske udfordring med hår?",
+                        "options": [
+                            "Tørt",
+                            "Fedtet",
+                            "Kruset",
+                            "Skadet",
+                            "Normalt",
+                            "Volumen",
+                            "Farven"
+                        ]
+                    },
+                    {
+                        "subNumber": 2,
+                        "question": "Hvilken type hårprodukter foretrækker personen?",
+                        "options": [
+                            "Shampoo",
+                            "Conditioner",
+                            "Hårkur",
+                            "Hårolie",
+                            "Hårspray",
+                            "Voks",
+                            "Gel"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Duft",
+                "questions": [
+                    {
+                        "subNumber": 1,
+                        "question": "Hvilken slags duft foretrækker personen?",
+                        "options": [
+                            "Blomster",
+                            "Frugt",
+                            "Træ",
+                            "Krydret",
+                            "Citrus",
+                            "Sød",
+                            "Frisk"
+                        ]
+                    },
+                    {
+                        "subNumber": 2,
+                        "question": "Hvilken type duft foretrækker personen?",
+                        "options": [
+                            "Eau de Parfum",
+                            "Eau de Toilette",
+                            "Eau de Cologne",
+                            "Eau Fraiche",
+                            "Parfumeolie"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Negle",
+                "questions": [
+                    {
+                        "subNumber": 1,
+                        "question": "Hvad er personens hovedfokus med neglepleje?",
+                        "options": [
+                            "Styrke",
+                            "Fugt",
+                            "Farve",
+                            "Holdbarhed",
+                            "Skønhed"
+                        ]
+                    },
+                    {
+                        "subNumber": 2,
+                        "question": "Hvad foretrækker personen?",
+                        "options": [
+                            "Neglelak",
+                            "Neglelakfjerner",
+                            "Neglepleje"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Body care",
+                "questions": [
+                    {
+                        "subNumber": 1,
+                        "question": "Hvad er personens hovedfokus med body care?",
+                        "options": [
+                            "Moisturizing",
+                            "Firming",
+                            "Exfoliating",
+                            "Anti-aging",
+                            "Sun care"
+                        ]
+                    },
+                    {
+                        "subNumber": 2,
+                        "question": "Hvad foretrækker personen?",
+                        "options": [
+                            "Bodylotion",
+                            "Bodycreme",
+                            "Bodybutter",
+                            "Bodyolie",
+                            "Bodymist",
+                            "Body scrub"
+                        ]
+                    }
                 ]
             }
         ]
     },
     {
-        "kategori": "Hårpleje",
-        "questions": [
-            {
-                "subNumber": 1,
-                "question": "Hvad er personens typiske udfordring med hår?",
-                "options": [
-                    "Tørt",
-                    "Fedtet",
-                    "Kruset",
-                    "Skadet",
-                    "Normalt",
-                    "Volumen",
-                    "Farven"
-                ]
-            },
-            {
-                "subNumber": 2,
-                "question": "Hvilken type hårprodukter foretrækker personen?",
-                "options": [
-                    "Shampoo",
-                    "Conditioner",
-                    "Hårkur",
-                    "Hårolie",
-                    "Hårspray",
-                    "Voks",
-                    "Gel"
-                ]
-            }
-        ]
-    },
-    {
-        "kategori": "Duft",
-        "questions": [
-            {
-                "subNumber": 1,
-                "question": "Hvilken slags duft foretrækker personen?",
-                "options": [
-                    "Blomster",
-                    "Frugt",
-                    "Træ",
-                    "Krydret",
-                    "Citrus",
-                    "Sød",
-                    "Frisk"
-                ]
-            },
-            {
-                "subNumber": 2,
-                "question": "Hvilken type duft foretrækker personen?",
-                "options": [
-                    "Eau de Parfum",
-                    "Eau de Toilette",
-                    "Eau de Cologne",
-                    "Eau Fraiche",
-                    "Parfumeolie"
-                ]
-            }
-        ]
-    },
-    {
-        "kategori": "Negle",
-        "questions": [
-            {
-                "subNumber": 1,
-                "question": "Hvad er personens hovedfokus med neglepleje?",
-                "options": [
-                    "Styrke",
-                    "Fugt",
-                    "Farve",
-                    "Holdbarhed",
-                    "Skønhed"
-                ]
-            },
-            {
-                "subNumber": 2,
-                "question": "Hvad foretrækker personen?",
-                "options": [
-                    "Neglelak",
-                    "Neglelakfjerner",
-                    "Neglepleje"
-                ]
-            }
-        ]
-    },
-    {
-        "kategori": "Body care",
-        "questions": [
-            {
-                "subNumber": 1,
-                "question": "Hvad er personens hovedfokus med body care?",
-                "options": [
-                    "Moisturizing",
-                    "Firming",
-                    "Exfoliating",
-                    "Anti-aging",
-                    "Sun care"
-                ]
-            },
-            {
-                "subNumber": 2,
-                "question": "Hvad foretrækker personen?",
-                "options": [
-                    "Bodylotion",
-                    "Bodycreme",
-                    "Bodybutter",
-                    "Bodyolie",
-                    "Bodymist",
-                    "Body scrub"
-                ]
-            }
-        ]
+        "number": 4,
+        "question": "Hvad er budgettet?"
     }
 ]

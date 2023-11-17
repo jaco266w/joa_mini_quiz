@@ -4,7 +4,11 @@ export default function ModalButtons(props) {
       <button onClick={props.clickBackwards} className="btn btn-neutral">
         Tilbage
       </button>
-      <button onClick={props.clickForwards} className="btn btn-primary">
+      <button
+        onClick={props.clickForwards}
+        className="btn btn-primary"
+        disabled={!props.isOptionSelected}
+      >
         Næste
       </button>
     </div>

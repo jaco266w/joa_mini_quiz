@@ -13,6 +13,9 @@ export default function Steps(props) {
       <li
         className={`step ${props.currentStep >= 4 ? "step step-primary" : ""}`}
       ></li>
+      <li
+        className={`step ${props.currentStep >= 5 ? "step step-primary" : ""}`}
+      ></li>
     </ul>
   );
 }
