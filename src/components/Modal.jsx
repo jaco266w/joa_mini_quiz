@@ -68,7 +68,7 @@ export default function Modal() {
             <Q4 />
           </Slide>
         )}
-        {currentSlide === 0 && (
+        {currentSlide === 5 && (
           <div>
             <Qend />
             <GiftButton />
