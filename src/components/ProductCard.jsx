@@ -3,7 +3,7 @@ export async function generateMetadata() {}
 
 export default async function ProductCard(props) {
   return (
-    <div className="card w-72 p-4 bg-base-100 border-solid border-2  border-slate-200 hover:shadow-xl transition-shadow">
+    <div className="card w-72 p-4 bg-base-100 border-solid border  border-slate-200 hover:shadow-md transition-shadow">
       <figure>
         <Image
           className="w-20 h-44 object-cover"

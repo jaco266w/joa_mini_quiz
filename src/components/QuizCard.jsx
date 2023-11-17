@@ -7,7 +7,7 @@ export default function QuizCard() {
   return (
     <>
       <div
-        className="card w-72 bg-neutral cursor-pointer hover:shadow-xl transition-shadow"
+        className="card w-72 bg-neutral border cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
         <figure>
