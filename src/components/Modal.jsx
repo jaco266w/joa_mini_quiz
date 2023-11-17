@@ -10,6 +10,7 @@ import Q1 from "./Q1";
 import Q2 from "./Q2";
 import Q3 from "./Q3";
 import Q4 from "./Q4";
+import Image from "next/image";
 
 export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,10 +30,19 @@ export default function Modal() {
   }
   return (
     <dialog id="my_modal_3" className="modal">
-      <div className="modal-box bg-cover bg-no-repeat bg-center bg-[url('/quiz_bg.png')]  w-9/12 max-w-2xl  ">
-        <form className="h-20" method="dialog">
+      <div className="modal-box w-9/12 max-w-2xl overflow-clip">
+        <Image
+          height={500}
+          width={500}
+          src="/quiz_bg.png"
+          alt="quiz_bg"
+          className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
+        />
+        <form className="h-44" method="dialog">
           {/* if there is a button in form, it will close the modal */}
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            ✕
+          </button>
         </form>
         {currentSlide === 0 && (
           <div>
@@ -63,7 +73,10 @@ export default function Modal() {
         {currentSlide !== 0 && (
           <>
             <Steps currentStep={currentSlide} />
-            <ModalButtons clickBackwards={prevSlide} clickForwards={nextSlide} />
+            <ModalButtons
+              clickBackwards={prevSlide}
+              clickForwards={nextSlide}
+            />
           </>
         )}
       </div>
