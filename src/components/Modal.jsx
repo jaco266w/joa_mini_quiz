@@ -30,7 +30,7 @@ export default function Modal() {
   return (
     <dialog id="my_modal_3" className="modal">
       <div className="modal-box bg-cover bg-no-repeat bg-center bg-[url('/quiz_bg.png')]  w-9/12 max-w-2xl  ">
-        <form className="h-44" method="dialog">
+        <form className="h-20" method="dialog">
           {/* if there is a button in form, it will close the modal */}
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>

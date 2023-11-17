@@ -1,6 +1,6 @@
 export default function Q1() {
   return (
-    <div className="flex flex-col justify-center p-20">
+    <div className="flex flex-col justify-center pb-10">
       <div className="grid place-content-center">
         <ul>
           <li>
