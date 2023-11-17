@@ -1,5 +1,3 @@
-import { list } from "postcss";
-
 export default function Q3() {
 	return (
 		<ul>
