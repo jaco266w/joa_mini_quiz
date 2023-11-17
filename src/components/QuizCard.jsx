@@ -12,7 +12,7 @@ export default function QuizCard() {
       >
         <figure>
           <Image
-            className="object-contain h-48 w-48 m-4 "
+            className="object-contain h-48 w-48 m-4"
             width={200}
             height={200}
             src="/gifts.png"
