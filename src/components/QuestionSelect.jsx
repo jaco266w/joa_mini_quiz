@@ -1,5 +1,4 @@
 function QuestionSelect(props) {
-  console.log(props);
   return (
     <div className="flex flex-col justify-center gap-10">
       <h3 className="font-bold font-serif text-center text-3xl">
