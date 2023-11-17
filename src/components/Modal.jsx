@@ -16,8 +16,8 @@ import Image from "next/image";
 
 export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [q3Svar, setQ3Svar] = useState("");
-  console.log(q3Svar);
+  const [q2Svar, setQ2Svar] = useState("");
+  console.log(q2Svar);
 
   const questions = require("../utils/questions.json");
 
@@ -73,7 +73,7 @@ export default function Modal() {
         )}
         {currentSlide === 2 && (
           <Slide title="Andet Spørgsmål">
-            <Q2 onChange={(e) => setQ3Svar(e.target.value)} />
+            <Q2 onChange={(e) => setQ2Svar(e.target.value)} />
           </Slide>
         )}
         {currentSlide === 3 && (
