@@ -30,7 +30,7 @@ export default function Modal() {
   }
   return (
     <dialog id="my_modal_3" className="modal">
-      <div className="modal-box w-9/12 max-w-2xl overflow-clip">
+      <div className="modal-box  h-4/6 max-w-2xl overflow-clip flex flex-col justify-between">
         <Image
           height={500}
           width={500}
@@ -38,7 +38,7 @@ export default function Modal() {
           alt="quiz_bg"
           className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
         />
-        <form className="h-44" method="dialog">
+        <form className="" method="dialog">
           {/* if there is a button in form, it will close the modal */}
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
             ✕
