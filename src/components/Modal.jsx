@@ -30,7 +30,7 @@ export default function Modal() {
   }
   return (
     <dialog id="my_modal_3" className="modal">
-      <div className="modal-box  h-4/6 max-w-2xl overflow-clip flex flex-col justify-between">
+      <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between">
         <Image
           height={500}
           width={500}
@@ -45,10 +45,14 @@ export default function Modal() {
           </button>
         </form>
         {currentSlide === 0 && (
-          <div>
+          <>
             <Qstart />
+          </>
+        )}
+        {currentSlide === 0 && (
+          <>
             <StartButton clickForwards={nextSlide} />
-          </div>
+          </>
         )}
         {currentSlide === 1 && (
           <Slide title="Første Spørgsmål">
@@ -71,13 +75,13 @@ export default function Modal() {
           </Slide>
         )}
         {currentSlide !== 0 && (
-          <>
+          <div clas>
             <Steps currentStep={currentSlide} />
             <ModalButtons
               clickBackwards={prevSlide}
               clickForwards={nextSlide}
             />
-          </>
+          </div>
         )}
       </div>
     </dialog>
