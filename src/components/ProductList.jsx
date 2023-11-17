@@ -5,7 +5,7 @@ import QuizCard from "./QuizCard";
 let { data: produkter, error } = await supabase
   .from("produkter")
   .select("*")
-  .order("id", { ascending: false })
+  .order("id", { ascending: true })
   .limit(11);
 
 function ProductList(props) {

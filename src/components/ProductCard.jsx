@@ -14,8 +14,8 @@ export default async function ProductCard(props) {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{props.brand}</h2>
-        <p className="text-slate-500">{props.name}</p>
+        <h2 className="card-title text-base font-normal">{props.name}</h2>
+        <p className="text-slate-500">{props.price}</p>
         <div className="card-actions justify-start">
           <button className="btn btn-primary grow">Læg i kurv</button>
           <button className="btn ">

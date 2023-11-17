@@ -19,7 +19,7 @@ export default function QuizCard() {
             alt="gaveide"
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body ">
           <p className="text-center">Kan du ikke finde den perfekte gave?</p>
           <button className="btn btn-neutral">Tag quizzen</button>
         </div>
