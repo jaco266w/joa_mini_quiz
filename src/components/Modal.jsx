@@ -3,7 +3,9 @@ import ModalButtons from "./ModalButtons";
 import Steps from "./Steps";
 
 import { useState } from "react";
+import Qstart from "./Qstart";
 import Q1 from "./Q1";
+import Q2 from "./Q2";
 import Q3 from "./Q3";
 import Q4 from "./Q4";
 
