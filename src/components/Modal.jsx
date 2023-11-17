@@ -2,6 +2,7 @@ import Slide from "./Slide";
 
 import ModalButtons from "./ModalButtons";
 import StartButton from "./StartButton";
+import GiftButton from "./GiftButton";
 import Steps from "./Steps";
 
 import { useState } from "react";
@@ -10,6 +11,7 @@ import Q1 from "./Q1";
 import Q2 from "./Q2";
 import Q3 from "./Q3";
 import Q4 from "./Q4";
+import Qend from "./Qend";
 import Image from "next/image";
 
 export default function Modal() {
@@ -31,18 +33,10 @@ export default function Modal() {
   return (
     <dialog id="my_modal_3" className="modal ">
       <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
-        <Image
-          height={500}
-          width={500}
-          src="/quiz_bg.png"
-          alt="quiz_bg"
-          className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
-        />
+        <Image height={500} width={500} src="/quiz_bg.png" alt="quiz_bg" className="absolute -z-50 top-0 left-0 w-full h-full scale-110" />
         <form className="" method="dialog">
           {/* if there is a button in form, it will close the modal */}
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-            ✕
-          </button>
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
         {currentSlide === 0 && (
           <>
@@ -74,13 +68,16 @@ export default function Modal() {
             <Q4 />
           </Slide>
         )}
+        {currentSlide === 0 && (
+          <div>
+            <Qend />
+            <GiftButton />
+          </div>
+        )}
         {currentSlide !== 0 && (
           <div clas>
             <Steps currentStep={currentSlide} />
-            <ModalButtons
-              clickBackwards={prevSlide}
-              clickForwards={nextSlide}
-            />
+            <ModalButtons clickBackwards={prevSlide} clickForwards={nextSlide} />
           </div>
         )}
       </div>
