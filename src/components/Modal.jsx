@@ -29,8 +29,8 @@ export default function Modal() {
     setCurrentSlide((old) => old - 1);
   }
   return (
-    <dialog id="my_modal_3" className="modal">
-      <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between">
+    <dialog id="my_modal_3" className="modal ">
+      <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
         <Image
           height={500}
           width={500}
