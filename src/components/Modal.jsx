@@ -3,6 +3,7 @@ import ModalButtons from "./ModalButtons";
 import Steps from "./Steps";
 
 import { useState } from "react";
+import Q1 from "./Q1";
 
 export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,55 +29,7 @@ export default function Modal() {
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
         <Slide title="Hvad er den særlige anledning?">
-          <div className="flex flex-col justify-center p-20">
-            <div className="grid place-content-center">
-              <ul>
-                <li>
-                  <div className="form-control">
-                    <label className="label justify-start cursor-pointer">
-                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
-                      <span className="label-text pl-4">Julegave</span>
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div className="form-control">
-                    <label className="label justify-start cursor-pointer">
-                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
-                      <span className="label-text pl-4">Fødselsdag</span>
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="form-control">
-                    <label className="label justify-start cursor-pointer">
-                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
-                      <span className="label-text pl-4">Årsdag</span>
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="form-control">
-                    <label className="label justify-start cursor-pointer">
-                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
-                      <span className="label-text pl-4">Bare fordi</span>
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="form-control">
-                    <label className="label justify-start cursor-pointer">
-                      <input type="radio" name="radio-10" className="radio checked:bg-primary" />
-                      <span className="label-text pl-4">Undskyld gave</span>
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Q1 />
         </Slide>
         <Steps currentStep={currentSlide} />
         <ModalButtons clickBackwards={() => prevSlide()} clickForwards={() => nextSlide()} />
