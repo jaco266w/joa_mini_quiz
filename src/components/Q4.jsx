@@ -1,6 +1,8 @@
+"use client";
+
 export default function Q4() {
 	return (
-		<div className="my-12">
+		<>
 			<input
 				type="range"
 				min={0}
@@ -16,6 +18,6 @@ export default function Q4() {
 				<span>|</span>
 				<span>|</span>
 			</div>
-		</div>
+		</>
 	);
 }
