@@ -6,7 +6,7 @@ export default async function ProductCard(props) {
     <div className="card w-72 p-4 bg-base-100 border-solid border-2  border-slate-200 hover:shadow-xl transition-shadow">
       <figure>
         <Image
-          className="w-20 h-44"
+          className="w-20 h-44 object-cover"
           src={props.image}
           alt="produkt"
           width={200}
