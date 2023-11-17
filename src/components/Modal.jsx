@@ -15,101 +15,102 @@ import Qend from "./Qend";
 import Image from "next/image";
 
 export default function Modal() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [q1Svar, setQ1Svar] = useState("");
-  const [q2Svar, setQ2Svar] = useState("");
+	const [currentSlide, setCurrentSlide] = useState(0);
+	const [q1Svar, setQ1Svar] = useState("");
+	const [q2Svar, setQ2Svar] = useState("");
 
-  console.log(q2Svar);
+	console.log(q1Svar);
+	console.log(q2Svar);
 
-  const questions = require("../utils/questions.json");
+	const questions = require("../utils/questions.json");
 
-  const makeUpQuestions = questions[0];
-  const haarQuestions = questions[1];
-  const duftQuestions = questions[2];
-  const negleQuestions = questions[3];
-  const bodyCareQuestions = questions[4];
+	const makeUpQuestions = questions[0];
+	const haarQuestions = questions[1];
+	const duftQuestions = questions[2];
+	const negleQuestions = questions[3];
+	const bodyCareQuestions = questions[4];
 
-  const q2Questions = questions.filter(
-    (question) => question.kategori === q2Svar,
-  );
+	const q2Questions = questions.filter(
+		(question) => question.kategori === q2Svar
+	);
 
-  console.log(q2Questions);
+	console.log(q2Questions);
 
-  function nextSlide() {
-    if (currentSlide === 5) {
-      return;
-    }
-    setCurrentSlide((old) => old + 1);
-  }
+	function nextSlide() {
+		if (currentSlide === 5) {
+			return;
+		}
+		setCurrentSlide((old) => old + 1);
+	}
 
-  function prevSlide() {
-    if (currentSlide === 0) {
-      return;
-    }
-    setCurrentSlide((old) => old - 1);
-  }
-  return (
-    <dialog id="my_modal_3" className="modal ">
-      <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
-        <Image
-          height={500}
-          width={500}
-          src="/quiz_bg.png"
-          alt="quiz_bg"
-          className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
-        />
-        <form className="" method="dialog">
-          {/* if there is a button in form, it will close the modal */}
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-            ✕
-          </button>
-        </form>
-        {currentSlide === 0 && (
-          <>
-            <Qstart />
-          </>
-        )}
-        {currentSlide === 0 && (
-          <>
-            <StartButton clickForwards={nextSlide} />
-          </>
-        )}
-        {currentSlide === 1 && (
-          <Slide title="Første Spørgsmål">
-            <Q1 onChange={(e) => setQ1Svar(e.target.value)} />
-          </Slide>
-        )}
-        {currentSlide === 2 && (
-          <Slide title="Andet Spørgsmål">
-            <Q2 onChange={(e) => setQ2Svar(e.target.value)} />
-          </Slide>
-        )}
-        {currentSlide === 3 && (
-          <Slide title="hihi">
-            <Q3 q2Svar={q2Svar} />
-          </Slide>
-        )}
-        {currentSlide === 4 && (
-          <Slide title="Fjerde Spørgsmål">
-            <Q4 />
-          </Slide>
-        )}
-        {currentSlide === 5 && (
-          <div>
-            <Qend />
-            <GiftButton />
-          </div>
-        )}
-        {currentSlide >= 1 && currentSlide <= 4 ? (
-          <div>
-            <Steps currentStep={currentSlide} />
-            <ModalButtons
-              clickBackwards={prevSlide}
-              clickForwards={nextSlide}
-            />
-          </div>
-        ) : null}
-      </div>
-    </dialog>
-  );
+	function prevSlide() {
+		if (currentSlide === 0) {
+			return;
+		}
+		setCurrentSlide((old) => old - 1);
+	}
+	return (
+		<dialog id="my_modal_3" className="modal ">
+			<div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
+				<Image
+					height={500}
+					width={500}
+					src="/quiz_bg.png"
+					alt="quiz_bg"
+					className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
+				/>
+				<form className="" method="dialog">
+					{/* if there is a button in form, it will close the modal */}
+					<button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+						✕
+					</button>
+				</form>
+				{currentSlide === 0 && (
+					<>
+						<Qstart />
+					</>
+				)}
+				{currentSlide === 0 && (
+					<>
+						<StartButton clickForwards={nextSlide} />
+					</>
+				)}
+				{currentSlide === 1 && (
+					<Slide title="Første Spørgsmål">
+						<Q1 onChange={(e) => setQ1Svar(e.target.value)} />
+					</Slide>
+				)}
+				{currentSlide === 2 && (
+					<Slide title="Andet Spørgsmål">
+						<Q2 onChange={(e) => setQ2Svar(e.target.value)} />
+					</Slide>
+				)}
+				{currentSlide === 3 && (
+					<Slide title="hihi">
+						<Q3 q2Svar={q2Svar} />
+					</Slide>
+				)}
+				{currentSlide === 4 && (
+					<Slide title="Fjerde Spørgsmål">
+						<Q4 />
+					</Slide>
+				)}
+				{currentSlide === 5 && (
+					<div>
+						<Qend />
+						<GiftButton />
+					</div>
+				)}
+				{currentSlide >= 1 && currentSlide <= 4 ? (
+					<div>
+						<Steps currentStep={currentSlide} />
+						<ModalButtons
+							clickBackwards={prevSlide}
+							clickForwards={nextSlide}
+						/>
+					</div>
+				) : null}
+			</div>
+		</dialog>
+	);
 }
