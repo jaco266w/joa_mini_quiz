@@ -73,12 +73,12 @@ export default function Modal() {
         )}
         {currentSlide === 2 && (
           <Slide title="Andet Spørgsmål">
-            <Q2 />
+            <Q2 onChange={(e) => setQ3Svar(e.target.value)} />
           </Slide>
         )}
         {currentSlide === 3 && (
           <Slide title="Tredje Spørgsmål">
-            <Q3 onChange={(e) => setQ3Svar(e.target.value)} />
+            <Q3 />
           </Slide>
         )}
         {currentSlide === 4 && (
