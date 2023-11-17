@@ -1,6 +1,6 @@
 function QuestionSelect(props) {
   return (
-    <div className="flex flex-col justify-center gap-10 h-full ">
+    <div className="flex flex-col justify-center gap-10 h-full max-w-md mx-auto">
       <h3 className="font-bold font-serif text-center text-3xl">
         {props.question.question}
       </h3>

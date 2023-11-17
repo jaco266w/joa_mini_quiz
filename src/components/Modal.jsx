@@ -87,7 +87,7 @@ export default function Modal() {
         )}
 
         {currentSlide === 6 && (
-          <div>
+          <div className="h-full flex flex-col justify-center">
             <Qend />
             <GiftButton />
           </div>
