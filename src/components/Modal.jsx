@@ -82,16 +82,15 @@ export default function Modal() {
 						<GiftButton />
 					</div>
 				)}
-				{currentSlide !== 0 ||
-					(currentSlide !== 5 && (
-						<div clas>
-							<Steps currentStep={currentSlide} />
-							<ModalButtons
-								clickBackwards={prevSlide}
-								clickForwards={nextSlide}
-							/>
-						</div>
-					))}
+				{currentSlide >= 1 && currentSlide <= 4 ? (
+					<div>
+						<Steps currentStep={currentSlide} />
+						<ModalButtons
+							clickBackwards={prevSlide}
+							clickForwards={nextSlide}
+						/>
+					</div>
+				) : null}
 			</div>
 		</dialog>
 	);
