@@ -7,23 +7,21 @@ export default function QuizCard() {
   return (
     <>
       <div
-        className="card w-72 bg-neutral border cursor-pointer hover:shadow-md transition-shadow"
+        className="card w-72  border cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
         <figure>
           <Image
-            className="object-cover h-56 scale-105"
-            width={500}
-            height={500}
-            src="/quiz.png"
+            className="object-contain h-48 w-48 m-4"
+            width={200}
+            height={200}
+            src="/gifts.png"
             alt="gaveide"
           />
         </figure>
         <div className="card-body">
-          <p className="uppercase text-center">Hjælp til gaven?</p>
-          <h2 className="card-title font-serif capitalize text-xl">
-            Gaven til den eneste ene
-          </h2>
+          <p className="text-center">Kan du ikke finde den perfekte gave?</p>
+          <button className="btn btn-neutral">Tag quizzen</button>
         </div>
       </div>
       <Modal />
