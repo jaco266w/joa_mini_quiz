@@ -1,6 +1,6 @@
 [
     {
-        "number": 1,
+        "kategori": "Make up",
         "questions": [
             {
                 "subNumber": 1,
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "number": 2,
+        "kategori": "Hårpleje",
         "questions": [
             {
                 "subNumber": 1,
@@ -58,7 +58,7 @@
         ]
     },
     {
-        "number": 3,
+        "kategori": "Duft",
         "questions": [
             {
                 "subNumber": 1,
@@ -87,7 +87,7 @@
         ]
     },
     {
-        "number": 4,
+        "kategori": "Negle",
         "questions": [
             {
                 "subNumber": 1,
@@ -112,7 +112,7 @@
         ]
     },
     {
-        "number": 5,
+        "kategori": "Body care",
         "questions": [
             {
                 "subNumber": 1,

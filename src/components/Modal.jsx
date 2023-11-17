@@ -18,8 +18,8 @@ export default function Modal() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [q1Svar, setQ1Svar] = useState("");
   const [q2Svar, setQ2Svar] = useState("");
-  // console.log(q2Svar);
-  console.log(q1Svar);
+
+  console.log(q2Svar);
 
   const questions = require("../utils/questions.json");
 
@@ -28,6 +28,12 @@ export default function Modal() {
   const duftQuestions = questions[2];
   const negleQuestions = questions[3];
   const bodyCareQuestions = questions[4];
+
+  const q2Questions = questions.filter(
+    (question) => question.kategori === q2Svar,
+  );
+
+  console.log(q2Questions);
 
   function nextSlide() {
     if (currentSlide === 5) {
@@ -45,10 +51,18 @@ export default function Modal() {
   return (
     <dialog id="my_modal_3" className="modal ">
       <div className="modal-box h-4/6 max-w-2xl overflow-clip flex flex-col justify-between rounded-2xl">
-        <Image height={500} width={500} src="/quiz_bg.png" alt="quiz_bg" className="absolute -z-50 top-0 left-0 w-full h-full scale-110" />
+        <Image
+          height={500}
+          width={500}
+          src="/quiz_bg.png"
+          alt="quiz_bg"
+          className="absolute -z-50 top-0 left-0 w-full h-full scale-110"
+        />
         <form className="" method="dialog">
           {/* if there is a button in form, it will close the modal */}
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            ✕
+          </button>
         </form>
         {currentSlide === 0 && (
           <>
@@ -71,8 +85,8 @@ export default function Modal() {
           </Slide>
         )}
         {currentSlide === 3 && (
-          <Slide title="Tredje Spørgsmål">
-            <Q3 />
+          <Slide title="hihi">
+            <Q3 q2Svar={q2Svar} />
           </Slide>
         )}
         {currentSlide === 4 && (
@@ -89,7 +103,10 @@ export default function Modal() {
         {currentSlide >= 1 && currentSlide <= 4 ? (
           <div>
             <Steps currentStep={currentSlide} />
-            <ModalButtons clickBackwards={prevSlide} clickForwards={nextSlide} />
+            <ModalButtons
+              clickBackwards={prevSlide}
+              clickForwards={nextSlide}
+            />
           </div>
         ) : null}
       </div>

@@ -24,7 +24,7 @@ export default function Q1(props) {
                   type="radio"
                   name="radio-10"
                   className="radio checked:bg-primary"
-                  value="Hudpleje"
+                  value="Hårpleje"
                   onChange={props.onChange}
                 />
                 <span className="label-text pl-4">Hårpleje</span>
@@ -39,7 +39,7 @@ export default function Q1(props) {
                   type="radio"
                   name="radio-10"
                   className="radio checked:bg-primary"
-                  value="Hårpleje"
+                  value="Dufte"
                   onChange={props.onChange}
                 />
                 <span className="label-text pl-4">Dufte</span>
@@ -54,7 +54,7 @@ export default function Q1(props) {
                   type="radio"
                   name="radio-10"
                   className="radio checked:bg-primary"
-                  value="Hårpleje"
+                  value="Negle"
                   onChange={props.onChange}
                 />
                 <span className="label-text pl-4">Negle</span>
@@ -68,7 +68,7 @@ export default function Q1(props) {
                 <input
                   type="radio"
                   name="radio-10"
-                  value="Hårpleje"
+                  value="Body care"
                   className="radio checked:bg-primary"
                   onChange={props.onChange}
                 />
