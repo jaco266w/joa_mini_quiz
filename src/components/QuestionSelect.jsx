@@ -13,7 +13,7 @@ function QuestionSelect(props) {
                   <input
                     type="radio"
                     name="radio-10"
-                    className="radio checked:bg-primary"
+                    className="radio radio-sm checked:bg-primary"
                     value={option}
                     onChange={props.onChange}
                     checked={props.svar === option}
