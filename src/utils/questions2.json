@@ -1,0 +1,88 @@
+[
+    {
+        "number": 0,
+        "question": "Hvem er gaven til?",
+        "options": [
+            "En god ven/veninde",
+            "Familie medlem (forælder, søskende, etc.)",
+            "Kæreste/partner",
+            "En kollega eller bekendt",
+            "Mig selv"
+        ]
+    },
+    {
+        "number": 1,
+        "question": "Hvad er den særlige anledning?",
+        "options": [
+            "Julegave",
+            "Fødselsdag",
+            "Årsdag",
+            "Bare fordi",
+            "Undskyldning"
+        ]
+    },
+    {
+        "number": 2,
+        "question": "Hvad er modtagerens køn?",
+        "options": [
+            "Mand",
+            "Kvinde",
+            "Non-binær",
+            "Kønnet er ikke vigtigt"
+        ]
+    },
+    {
+        "number": 3,
+        "question": "Hvad er modtagerens generelle stil?",
+        "options": [
+            "Minimalistisk",
+            "Sporty",
+            "Klassisk",
+            "Farverig",
+            "Trendy",
+            "Økologisk/naturlig",
+            "Ikke sikker"
+        ]
+    },
+    {
+        "number": 4,
+        "question": "Hvad er en daglig skønhedsrutine, du har bemærket, at modtageren følger?",
+        "options": [
+            "Daglig hudpleje (f.eks. fugtighedscreme, renseprodukter)",
+            "Daglig hårpleje (f.eks. shampoo, conditioner)",
+            "Daglig makeup rutine (f.eks. foundation, mascara)",
+            "Specialprodukter (f.eks. ansigtsmasker, serum)",
+            "Sjældent eller aldrig bruger skønhedsprodukter",
+            "Ikke sikker"
+        ]
+    },
+    {
+        "number": 5,
+        "question": "Er der specifikke problemer, som modtageren ofte nævner?",
+        "options": [
+            "Tør eller sensitiv hud",
+            "Fedtet eller problemhud",
+            "Fint eller skadet hår",
+            "Specifikke allergier eller sensitiviteter",
+            "Akne",
+            "Ingen kendte problemer eller behov",
+            "Ikke sikker"
+        ]
+    },
+    {
+        "number": 6,
+        "question": "Kan du beskrive en duft, du har bemærket, at modtageren bruger eller kan lide?",
+        "options": [
+            "Frisk og let",
+            "Sød og blomstret",
+            "Subtil og ren",
+            "Stærk og krydret",
+            "Foretrækker ikke duft",
+            "Ikke sikker"
+        ]
+    },
+    {
+        "number": 7,
+        "question": "Hvad er budgettet?"
+    }
+]

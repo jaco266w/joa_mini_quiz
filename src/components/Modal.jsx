@@ -16,7 +16,7 @@ export default function Modal() {
   console.log(svar);
 
   // Load questions from JSON file
-  const questions = require("../utils/questions.json");
+  const questions = require("../utils/questions2.json");
   // Separate the last question for the slider
   const sliderQuestion = questions.slice(-1)[0];
   // All other questions
@@ -24,7 +24,7 @@ export default function Modal() {
 
   // Function to go to the next slide
   const nextSlide = () => {
-    if (currentSlide < 6) {
+    if (currentSlide < 9) {
       setCurrentSlide((old) => old + 1);
     }
   };
@@ -58,35 +58,29 @@ export default function Modal() {
 
         {currentSlide === 0 && <Qstart clickForwards={nextSlide} />}
 
-        {otherQuestions
-          // Filter out the first two questions and the questions that don't match the previous answers
-          .filter(
-            (question, index) => index < 2 || question.category === svar[1],
-          )
-          // Map over the remaining questions and render them
-          .map(
-            (question, index) =>
-              index === currentSlide - 1 && (
-                <QuestionSelect
-                  key={index}
-                  question={question}
-                  onChange={handleChange(index)}
-                  svar={svar[index]}
-                />
-              ),
-          )}
+        {otherQuestions.map(
+          (question, index) =>
+            index === currentSlide - 1 && (
+              <QuestionSelect
+                key={index}
+                question={question}
+                onChange={handleChange(index)}
+                svar={svar[index]}
+              />
+            ),
+        )}
 
-        {currentSlide === 5 && (
+        {currentSlide === 8 && (
           <QuestionSlider
             question={sliderQuestion}
-            onChange={handleChange(4)}
-            svar={svar[4]}
+            onChange={handleChange(7)}
+            svar={svar[7]}
           />
         )}
 
-        {currentSlide === 6 && <Qend />}
+        {currentSlide === 9 && <Qend />}
 
-        {currentSlide >= 1 && currentSlide <= 5 && (
+        {currentSlide >= 1 && currentSlide <= 8 && (
           <div>
             <ModalButtons
               clickBackwards={prevSlide}
