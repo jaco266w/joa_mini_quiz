@@ -4,7 +4,7 @@ export default function Qstart() {
   return (
     <div>
       <div className="flex flex-col items-center gap-10">
-        <h2 className="font-serif text-center font-bold text-4xl">
+        <h2 className="font-medium font-serif text-center text-3xl">
           Find den perfekte gave
         </h2>
         <Image

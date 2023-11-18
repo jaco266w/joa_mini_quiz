@@ -22,7 +22,7 @@ module.exports = {
         "accent": "#EB595D",
         "neutral": "#D8D1CB",
         "base-100": "#ffffff",
-        "--rounded-box": "0.4rem", 
+        "--rounded-box": "0.4rem",
       }
     }]
   },
