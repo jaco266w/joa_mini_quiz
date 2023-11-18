@@ -1,46 +1,14 @@
-export default function Steps(props) {
+export default function Steps({ numSteps, currentStep }) {
   return (
     <ul className="steps text-xs w-full mb-2">
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 1 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 2 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 3 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 4 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 5 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 6 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 7 ? "step step-primary" : ""
-        }`}
-      ></li>
-      <li
-        className={`step step-neutral ${
-          props.currentStep >= 8 ? "step step-primary" : ""
-        }`}
-      ></li>
+      {Array.from({ length: numSteps }, (_, i) => (
+        <li
+          key={i}
+          className={`step step-neutral ${
+            currentStep >= i + 1 ? "step-primary" : "step-neutral"
+          }`}
+        ></li>
+      ))}
       <style jsx>{`
         .steps .step:before {
           height: 0.25rem;

@@ -17,6 +17,7 @@ export default function Modal() {
 
   // Load questions from JSON file
   const questions = require("../utils/questions2.json");
+  const numQuestions = questions.length;
   // Separate the last question for the slider
   const sliderQuestion = questions.slice(-1)[0];
   // All other questions
@@ -87,7 +88,7 @@ export default function Modal() {
               clickForwards={nextSlide}
               isOptionSelected={svar[currentSlide - 1] !== undefined}
             />
-            <Steps currentStep={currentSlide} />
+            <Steps currentStep={currentSlide} numSteps={numQuestions} />
           </div>
         )}
       </div>
