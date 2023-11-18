@@ -6,11 +6,11 @@ export default function QuestionSlider(props) {
   };
 
   return (
-    <div className="flex flex-col gap-10 z-50">
+    <div className="flex flex-col gap-10 h-full justify-center z-50">
       <h3 className="font-medium font-serif text-center text-3xl">
         {props.question.question}
       </h3>
-      <div className=" w-3/4 mx-auto">
+      <div className=" w-3/4 mx-auto ">
         <input
           type="range"
           min={0}

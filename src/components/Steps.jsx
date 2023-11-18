@@ -1,6 +1,6 @@
 export default function Steps(props) {
   return (
-    <ul className="steps  w-full mb-4">
+    <ul className="steps w-full mb-4">
       <li
         className={`step step-neutral ${
           props.currentStep >= 1 ? "step step-primary" : ""

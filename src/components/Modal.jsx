@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ModalButtons from "./ModalButtons";
-import StartButton from "./StartButton";
 import GiftButton from "./GiftButton";
 import Steps from "./Steps";
 import Qstart from "./Qstart";
@@ -50,15 +49,14 @@ export default function Modal() {
   // Render the modal
   return (
     <dialog id="my_modal_3" className="modal ">
-      <div className="modal-box h-screen md:h-4/6 max-w-2xl overflow-hidden flex flex-col justify-between rounded-2xl">
+      <div className="modal-box h-4/6 md:h-4/6 max-w-2xl overflow-hidden flex flex-col rounded-2xl">
         <form className="" method="dialog">
           <button className="btn md:btn-sm btn-circle btn-ghost absolute right-2 top-2 text-xl">
             ✕
           </button>
         </form>
 
-        {currentSlide === 0 && <Qstart />}
-        {currentSlide === 0 && <StartButton clickForwards={nextSlide} />}
+        {currentSlide === 0 && <Qstart clickForwards={nextSlide} />}
 
         {otherQuestions
           // Filter out the first two questions and the questions that don't match the previous answers
@@ -86,12 +84,7 @@ export default function Modal() {
           />
         )}
 
-        {currentSlide === 6 && (
-          <div className="h-full flex flex-col justify-center">
-            <Qend />
-            <GiftButton />
-          </div>
-        )}
+        {currentSlide === 6 && <Qend />}
 
         {currentSlide >= 1 && currentSlide <= 5 && (
           <div>

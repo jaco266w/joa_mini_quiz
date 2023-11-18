@@ -1,20 +1,24 @@
 import Image from "next/image";
 
-export default function Qstart() {
+export default function Qstart(props) {
   return (
-    <div>
-      <div className="flex flex-col items-center gap-10">
-        <h2 className="font-medium font-serif text-center text-3xl">
-          Find den perfekte gave
+    <div className="flex flex-col items-center justify-center h-3/6 gap-10 ">
+      <div className="flex flex-col gap-10 items-center ">
+        <h2 className="font-serif text-center font-medium text-4xl max-w-sm">
+          Få hjælp af vores magiske gaveguide!
         </h2>
-        <Image
-          src={"/gifts.png"}
-          alt="hello"
-          width="350"
-          height="350"
-          className=" "
-        />
+        <button onClick={props.clickForwards} className="btn btn-primary ">
+          Start
+        </button>
       </div>
+
+      <Image
+        src={"/wizard4.png"}
+        alt="hello"
+        width="500"
+        height="400"
+        className="absolute -bottom-48  object-contain pointer-events-none"
+      />
     </div>
   );
 }
