@@ -6,28 +6,25 @@ export default function QuestionSlider(props) {
   };
 
   return (
-    <div className="flex flex-col gap-10 h-full justify-center z-50">
+    <div className="flex flex-col gap-10 h-full justify-center items-center z-50">
       <h3 className="font-medium font-serif text-center text-3xl">
         {props.question.question}
       </h3>
-      <div className=" w-3/4 mx-auto ">
+      <div className=" w-3/4 mx-auto">
         <input
           type="range"
           min={0}
-          max="100"
+          max="2000"
           value={props.svar}
           onChange={handleChange}
-          className="range range-primary"
-          step="25"
+          className="range  range-lg range-primary"
         />
-        <div className="w-full flex justify-between text-xs px-2">
-          <span>|</span>
-          <span>|</span>
-          <span>|</span>
-          <span>|</span>
-          <span>|</span>
-        </div>
       </div>
+      <p>
+        <span className="text-primary  text-2xl">
+          {props.svar === "2000" ? "2000+ DKK" : `${props.svar} DKK`}
+        </span>
+      </p>
     </div>
   );
 }

@@ -95,7 +95,7 @@ export default function Modal() {
       <style jsx>{`
         @media (min-height: 800px) {
           .modal-box {
-            height: 75vh;
+            height: 70vh;
           }
         }
       `}</style>
