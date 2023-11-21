@@ -21,7 +21,7 @@ export default function Qend() {
   }, [wizard]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-3/6 gap-10 ">
+    <div className="flex flex-col items-center justify-start h-full gap-10 pt-20 ">
       <div className="flex flex-col gap-10 items-center ">
         <h2 className="font-serif text-center font-medium text-4xl">
           {message}
