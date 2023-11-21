@@ -50,7 +50,7 @@ export default function Modal() {
   // Render the modal
   return (
     <dialog id="my_modal_3" className="modal ">
-      <div className="modal-box h-4/6 md:h-4/6 max-w-2xl overflow-hidden flex flex-col rounded-2xl">
+      <div className="modal-box h-screen  max-w-2xl overflow-hidden flex flex-col justify-between rounded-2xl">
         <form className="" method="dialog">
           <button className="btn md:btn-sm btn-circle btn-ghost absolute right-2 top-2 text-xl">
             ✕
@@ -92,6 +92,13 @@ export default function Modal() {
           </div>
         )}
       </div>
+      <style jsx>{`
+        @media (min-height: 800px) {
+          .modal-box {
+            height: 75vh;
+          }
+        }
+      `}</style>
     </dialog>
   );
 }
