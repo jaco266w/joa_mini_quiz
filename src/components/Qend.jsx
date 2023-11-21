@@ -38,7 +38,7 @@ export default function Qend() {
         alt="hello"
         width="500"
         height="400"
-        className="absolute -bottom-48  object-contain pointer-events-none"
+        className="absolute top-56  object-contain pointer-events-none"
       />
     </div>
   );
