@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ConfettiComponent from "./ConfettiComponent";
 
 export default function Qstart(props) {
   return (
@@ -10,6 +11,7 @@ export default function Qstart(props) {
         <button onClick={props.clickForwards} className="btn btn-primary ">
           Start
         </button>
+        <ConfettiComponent confetti={props.confetti} />
       </div>
 
       <Image

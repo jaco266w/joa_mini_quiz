@@ -11,9 +11,7 @@ export default function QuizCard() {
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
         <div className="text-center flex flex-col justify-center gap-4 items-center h-1/2 mx-8">
-          <p className="text-sm">
-            Kan du ikke vælge den perfekte gave til din nærmeste?
-          </p>
+          <p className="text-sm">Kan du ikke vælge den helt perfekte gave?</p>
           <button className="btn btn-primary ">Spørg Wellness Wizard</button>
         </div>
         <figure>

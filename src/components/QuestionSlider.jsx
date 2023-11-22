@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function QuestionSlider(props) {
+  const [value, setValue] = useState(400);
+
   const handleChange = (event) => {
+    setValue(event.target.value);
     props.onChange(event);
   };
 
@@ -15,14 +18,14 @@ export default function QuestionSlider(props) {
           type="range"
           min={0}
           max="2000"
-          value={props.svar}
+          value={value}
           onChange={handleChange}
           className="range  range-lg range-primary"
         />
       </div>
       <p>
-        <span className="text-primary  text-2xl">
-          {props.svar === "2000" ? "2000+ DKK" : `${props.svar} DKK`}
+        <span className="text-base-content  text-2xl">
+          {props.svar === "2000" ? "2000+ DKK" : `${value} DKK`}
         </span>
       </p>
     </div>
