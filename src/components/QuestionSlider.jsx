@@ -23,11 +23,14 @@ export default function QuestionSlider(props) {
           className="range  range-lg range-primary"
         />
       </div>
-      <p>
-        <span className="text-base-content  text-2xl">
-          {props.svar === "2000" ? "2000+ DKK" : `${value} DKK`}
-        </span>
-      </p>
+      <div className="flex w-fit items-baseline justify-end gap-2 ">
+        <div>
+          <p className="text-base-content text-2xl text-right ">
+            {props.svar === "2000" ? "2000+" : `${value}`}
+          </p>
+        </div>
+        <p>DKK</p>
+      </div>
     </div>
   );
 }
