@@ -54,9 +54,9 @@ export default function Qend() {
           {message}
         </h2>
         {showButton && (
-          <button className="btn btn-primary">
-            <Link href="/resultspage">Se Resultat</Link>
-          </button>
+          <Link href="/resultspage" className="btn btn-primary">
+            Se Resultat
+          </Link>
         )}
       </div>
 
@@ -65,7 +65,7 @@ export default function Qend() {
         alt="hello"
         width="500"
         height="400"
-        className="absolute top-56  object-contain pointer-events-none"
+        className="absolute top-56  object-contain pointer-events-none "
       />
     </div>
   );
