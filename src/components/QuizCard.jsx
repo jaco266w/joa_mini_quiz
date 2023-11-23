@@ -21,7 +21,7 @@ export default function QuizCard() {
             className="object-cover translate-y-32 w-full absolute bottom-0 left-0 -z-50"
             width={200}
             height={200}
-            src="/wizard1.png"
+            src={"/wizard1.png"}
             alt="gaveide"
           />
         </figure>
