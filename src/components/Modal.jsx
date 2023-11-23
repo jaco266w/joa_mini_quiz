@@ -26,7 +26,8 @@ export default function Modal() {
   // All other questions
   const otherQuestions = questions.slice(0, -1);
 
-  const categoryQuestions = otherQuestions.slice(5, 9);
+  const categoryQuestions = otherQuestions.slice(5, 12);
+  console.log(categoryQuestions);
 
   // Function to go to the next slide
   const nextSlide = () => {
@@ -85,7 +86,7 @@ export default function Modal() {
         {currentSlide >= 6 &&
           currentSlide < 9 &&
           categoryQuestions
-            .filter((question) => question.category === svar[5])
+            .filter((question) => question.category === svar[4])
             .map(
               (question, index) =>
                 index === currentSlide - 6 && (
@@ -101,8 +102,8 @@ export default function Modal() {
         {currentSlide === 7 && (
           <QuestionSlider
             question={sliderQuestion}
-            onChange={handleChange(7)}
-            svar={svar[7]}
+            onChange={handleChange(6)}
+            svar={svar[6]}
           />
         )}
 
