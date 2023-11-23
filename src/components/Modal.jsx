@@ -117,7 +117,7 @@ export default function Modal() {
               confetti={confetti}
             />
 
-            <Steps currentStep={currentSlide} numSteps={numQuestions} />
+            <Steps currentStep={currentSlide} numSteps={7} />
           </div>
         )}
       </div>
