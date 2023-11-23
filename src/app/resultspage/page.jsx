@@ -4,7 +4,7 @@ let { data: produkter, error } = await supabase
   .from("produkter")
   .select("*")
   .order("id", { ascending: false })
-  .limit(4);
+  .limit(3);
 
 export default function Resultspage() {
   return (
