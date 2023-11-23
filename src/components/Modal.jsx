@@ -98,7 +98,7 @@ export default function Modal() {
                 ),
             )}
 
-        {currentSlide === 8 && (
+        {currentSlide === 7 && (
           <QuestionSlider
             question={sliderQuestion}
             onChange={handleChange(7)}
@@ -106,9 +106,9 @@ export default function Modal() {
           />
         )}
 
-        {currentSlide === 9 && <Qend />}
+        {currentSlide === 8 && <Qend />}
 
-        {currentSlide >= 1 && currentSlide <= 8 && (
+        {currentSlide >= 1 && currentSlide <= 7 && (
           <div>
             <ModalButtons
               clickBackwards={prevSlide}
