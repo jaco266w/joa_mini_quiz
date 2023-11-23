@@ -2,122 +2,57 @@
   {
     "number": 0,
     "question": "Hvem er gaven til?",
-    "options": [
-      "En god ven/veninde",
-      "Familie medlem (forælder, søskende, etc.)",
-      "Kæreste/partner",
-      "En kollega eller bekendt",
-      "Mig selv"
-    ]
+    "options": ["En god ven/veninde", "Familie medlem (forælder, søskende, etc.)", "Kæreste/partner", "En kollega eller bekendt", "Mig selv"]
   },
   {
     "number": 1,
     "question": "Hvad er den særlige anledning?",
-    "options": [
-      "Julegave",
-      "Fødselsdag",
-      "Årsdag",
-      "Bare fordi",
-      "Undskyldning"
-    ]
+    "options": ["Julegave", "Fødselsdag", "Årsdag", "Bare fordi", "Undskyldning"]
   },
   {
     "number": 2,
     "question": "Hvad er modtagerens køn?",
-    "options": [
-      "Mand",
-      "Kvinde",
-      "Andet",
-      "Ikke vigtigt"
-    ]
+    "options": ["Mand", "Kvinde", "Andet", "Ikke vigtigt"]
   },
   {
     "number": 3,
     "question": "Hvad er modtagerens generelle stil?",
-    "options": [
-      "Sporty",
-      "Farverig",
-      "Trendy",
-      "Økologisk/naturlig",
-      "Elegant",
-      "Afslappet",
-      "Ikke sikker"
-    ]
+    "options": ["Sporty", "Farverig", "Trendy", "Økologisk/naturlig", "Elegant", "Afslappet", "Ikke sikker"]
   },
   {
     "number": 4,
     "question": "Hvad er en daglig skønhedsrutine, du har bemærket, at modtageren følger?",
-    "options": [
-      "Daglig hudpleje (f.eks. fugtighedscreme, renseprodukter)",
-      "Daglig hårpleje (f.eks. shampoo, conditioner)",
-      "Daglig makeup rutine (f.eks. foundation, mascara)",
-      "Body care (f.eks. body lotion, body wash)",
-      "Dufte (f.eks. parfume, deodorant)"
-    ]
+    "options": ["Daglig hudpleje (f.eks. fugtighedscreme, renseprodukter)", "Daglig hårpleje (f.eks. shampoo, conditioner)", "Daglig makeup rutine (f.eks. foundation, mascara)", "Body care (f.eks. body lotion, body wash)", "Dufte (f.eks. parfume, deodorant)"]
   },
   {
     "number": 5,
     "category": "Daglig hudpleje (f.eks. fugtighedscreme, renseprodukter)",
     "question": "Er der specifikke hud-problemer, som modtageren ofte nævner?",
-    "options": [
-      "Tør eller sensitiv hud",
-      "Fedtet eller problemhud",
-      "Fint eller skadet hår",
-      "Specifikke allergier eller sensitiviteter",
-      "Akne",
-      "Ingen kendte problemer eller behov",
-      "Ikke sikker"
-    ]
+    "options": ["Tør eller sensitiv hud", "Fedtet eller problemhud", "Fint eller skadet hår", "Specifikke allergier eller sensitiviteter", "Akne", "Ingen kendte problemer eller behov", "Ikke sikker"]
   },
   {
     "number": 6,
     "category": "Daglig makeup rutine (f.eks. foundation, mascara)",
     "question": "Hvordan vil beskrive modtagerens stil?",
-    "options": [
-      "80'er",
-      "Pop",
-      "Vestegnen",
-      "Jyde",
-      "Forældre stil",
-      "Ikke sikker"
-    ]
+    "options": ["80'er", "Pop", "Vestegnen", "Jyde", "Forældre stil", "Ikke sikker"]
   },
   {
     "number": 7,
     "category": "Daglig hårpleje (f.eks. shampoo, conditioner)",
     "question": "Hvordan vil du beskrive modtagerens hår?",
-    "options": [
-      "Langt",
-      "Krællet",
-      "Volumiøst",
-      "Stærkt",
-      "Ikke sikker"
-    ]
+    "options": ["Langt", "Krøllet", "Volumiøst", "Stærkt", "Ikke sikker"]
   },
   {
     "number": 8,
     "category": "Dufte (f.eks. parfume, deodorant)",
     "question": "Kan du beskrive en duft, du har bemærket, at modtageren bruger eller kan lide?",
-    "options": [
-      "Frisk og let",
-      "Sød og blomstret",
-      "Subtil og ren",
-      "Stærk og krydret",
-      "Sexet",
-      "Ikke sikker"
-    ]
+    "options": ["Frisk og let", "Sød og blomstret", "Subtil og ren", "Stærk og krydret", "Sexet", "Ikke sikker"]
   },
   {
     "number": 9,
     "category": "Body care (f.eks. body lotion, body wash)",
     "question": "Hvad er modtagerens body care rutine?",
-    "options": [
-      "Bruger altid body lotion efter badet",
-      "Bruger altid body wash i badet",
-      "Bruger altid deodorant",
-      "Bruger aldrig body care produkter",
-      "Jeg ved ikke noget om vedkommendes body care rutine"
-    ]
+    "options": ["Bruger altid body lotion efter badet", "Bruger altid body wash i badet", "Bruger altid deodorant", "Bruger aldrig body care produkter", "Jeg ved ikke noget om vedkommendes body care rutine"]
   },
   {
     "number": 10,
