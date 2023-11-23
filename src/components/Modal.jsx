@@ -1,18 +1,20 @@
 import { useState } from "react";
-import ModalButtons from "./ModalButtons";
-import GiftButton from "./GiftButton";
+import Confetti from "react-dom-confetti";
 import Steps from "./Steps";
 import Qstart from "./Qstart";
 import Qend from "./Qend";
-import Image from "next/image";
 import QuestionSelect from "./QuestionSelect";
 import QuestionSlider from "./QuestionSlider";
+
+import ModalButtons from "./ModalButtons";
 
 // Main Modal component
 export default function Modal() {
   // State for current slide and answers
   const [currentSlide, setCurrentSlide] = useState(0);
   const [svar, setSvar] = useState([]);
+  const [confetti, setConfetti] = useState(false);
+
   console.log(svar);
 
   // Load questions from JSON file
@@ -26,6 +28,8 @@ export default function Modal() {
   // Function to go to the next slide
   const nextSlide = () => {
     if (currentSlide < 9) {
+      setConfetti(true);
+      setTimeout(() => setConfetti(false), 100);
       setCurrentSlide((old) => old + 1);
     }
   };
@@ -57,7 +61,9 @@ export default function Modal() {
           </button>
         </form>
 
-        {currentSlide === 0 && <Qstart clickForwards={nextSlide} />}
+        {currentSlide === 0 && (
+          <Qstart clickForwards={nextSlide} confetti={confetti} />
+        )}
 
         {otherQuestions.map(
           (question, index) =>
@@ -87,7 +93,9 @@ export default function Modal() {
               clickBackwards={prevSlide}
               clickForwards={nextSlide}
               isOptionSelected={svar[currentSlide - 1] !== undefined}
+              confetti={confetti}
             />
+
             <Steps currentStep={currentSlide} numSteps={numQuestions} />
           </div>
         )}

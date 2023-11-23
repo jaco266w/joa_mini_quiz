@@ -1,3 +1,5 @@
+import ConfettiComponent from "./ConfettiComponent";
+
 export default function ModalButtons(props) {
   return (
     <div className="flex justify-center gap-4 mb-8">
@@ -11,6 +13,7 @@ export default function ModalButtons(props) {
       >
         Næste
       </button>
+      <ConfettiComponent confetti={props.confetti} />
     </div>
   );
 }
