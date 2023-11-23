@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Confetti from "react-dom-confetti";
 import Steps from "./Steps";
 import Qstart from "./Qstart";
 import Qend from "./Qend";
