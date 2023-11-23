@@ -37,7 +37,7 @@ export default function Resultspage() {
               alt="pillar"
               width="300"
               height="1200"
-              className="hidden lg:block"
+              className="hidden lg:block -translate-x-1"
             />
           </div>
           <div>
@@ -53,7 +53,7 @@ export default function Resultspage() {
               alt="pillar"
               width="300"
               height="1200"
-              className="hidden lg:block"
+              className="hidden lg:block -translate-x-1"
             />
           </div>
           <div className="mt-0 lg:mt-32">
@@ -69,7 +69,7 @@ export default function Resultspage() {
               alt="pillar"
               width="300"
               height="1200"
-              className="hidden lg:block"
+              className="hidden lg:block -translate-x-1"
             />
           </div>
         </div>
